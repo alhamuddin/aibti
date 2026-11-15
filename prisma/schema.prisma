@@ -1,0 +1,497 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id                              String                    @id
+  name                            String
+  email                           String                    @unique
+  employeeId                      String?                   @unique
+  phone                           String?
+  qualifications                  String?                   @db.Text
+  achievements                    String?                   @db.Text
+  experience                      String?                   @db.Text
+  emailVerified                   Boolean                   @default(false)
+  image                           String?
+  createdAt                       DateTime                  @default(now())
+  updatedAt                       DateTime                  @updatedAt
+  role                            String                    @default("participant")
+  banned                          Boolean                   @default(false)
+  banReason                       String?
+  banExpires                      DateTime?
+  mustChangePassword              Boolean                   @default(false)
+  isMock                          Boolean                   @default(false)
+  branchId                        String?
+  branch                          Branch?                   @relation("BranchMembers", fields: [branchId], references: [id], onDelete: SetNull)
+  managedBranch                   Branch?                   @relation("BranchManager")
+  sessions                        Session[]
+  accounts                        Account[]
+  auditActions                    UserAuditLog[]            @relation("UserAuditActor")
+  auditRecords                    UserAuditLog[]            @relation("UserAuditTarget")
+  createdCourses                  Course[]                  @relation("CourseCreator")
+  taughtSubjects                  CourseSubject[]           @relation("SubjectTeacher")
+  courseEnrollments               CourseEnrollment[]        @relation("CourseParticipant")
+  assignedEnrollments             CourseEnrollment[]        @relation("EnrollmentAssigner")
+  speakerEvaluations              SpeakerEvaluation[]       @relation("SpeakerEvaluationParticipant")
+  courseAuditEvents               CourseAuditLog[]          @relation("CourseAuditActor")
+  initiatedAttendanceSessions     AttendanceSession[]       @relation("AttendanceSessionInitiator")
+  attendanceRecords               AttendanceRecord[]        @relation("AttendanceParticipant")
+  facilitatedLearnInBranchReports LearnInBranchReport[]     @relation("LearnInBranchFacilitator")
+  approvedLearnInBranchReports    LearnInBranchReport[]     @relation("LearnInBranchApprover")
+  learnInBranchAttendances        LearnInBranchAttendance[]
+  notifications                   Notification[]
+  reportExports                   ReportExportLog[]
+
+  @@index([branchId])
+  @@map("user")
+}
+
+model Branch {
+  id                   String                @id
+  code                 String                @unique
+  name                 String
+  managerUserId        String?               @unique
+  isMock               Boolean               @default(false)
+  createdAt            DateTime              @default(now())
+  updatedAt            DateTime              @updatedAt
+  manager              User?                 @relation("BranchManager", fields: [managerUserId], references: [id], onDelete: SetNull)
+  members              User[]                @relation("BranchMembers")
+  learnInBranchReports LearnInBranchReport[]
+
+  @@map("branch")
+}
+
+model UserAuditLog {
+  id           String   @id @default(cuid())
+  action       String
+  actorUserId  String
+  targetUserId String
+  createdAt    DateTime @default(now())
+  actor        User     @relation("UserAuditActor", fields: [actorUserId], references: [id], onDelete: Restrict)
+  target       User     @relation("UserAuditTarget", fields: [targetUserId], references: [id], onDelete: Restrict)
+
+  @@index([actorUserId, createdAt])
+  @@index([targetUserId, createdAt])
+  @@map("user_audit_log")
+}
+
+enum CourseStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum CourseEnrollmentStatus {
+  ASSIGNED
+  CONFIRMED
+  DECLINED
+  COMPLETED
+  WITHDRAWN
+}
+
+enum CourseMaterialType {
+  FILE
+  LINK
+  TEXT
+}
+
+enum DeliveryMode {
+  ONSITE
+  ONLINE
+  HYBRID
+}
+
+enum AttendanceStatus {
+  PRESENT
+  ABSENT
+}
+
+enum AttendanceMethod {
+  QR
+  MANUAL
+  AUTO
+}
+
+enum AttendanceCloseReason {
+  ADMIN
+  AUTO
+}
+
+enum LearnInBranchReportStatus {
+  PENDING_APPROVAL
+  APPROVED
+}
+
+model Course {
+  id                 String              @id
+  slug               String              @unique
+  title              String
+  description        String              @db.Text
+  category           String?
+  prerequisites      String?             @db.Text
+  learningOutcomes   String?             @db.Text
+  durationHours      Int?
+  durationDays       Int?
+  capacity           Int?
+  draftData          Json?
+  enrollmentOpensAt  DateTime?
+  enrollmentClosesAt DateTime?
+  status             CourseStatus        @default(DRAFT)
+  isMock             Boolean             @default(false)
+  creatorId          String
+  publishedAt        DateTime?
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+  creator            User                @relation("CourseCreator", fields: [creatorId], references: [id], onDelete: Restrict)
+  subjects           CourseSubject[]
+  classes            CourseClass[]
+  enrollments        CourseEnrollment[]
+  batches            CourseBatch[]
+  auditEvents        CourseAuditLog[]
+  attendanceSessions AttendanceSession[]
+  notifications      Notification[]
+
+  @@index([status, createdAt])
+  @@index([creatorId])
+  @@map("course")
+}
+
+model CourseBatch {
+  id                 String              @id
+  courseId           String
+  name               String
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+  course             Course              @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  subjects           CourseSubject[]
+  classes            CourseClass[]
+  enrollments        CourseEnrollment[]
+  attendanceSessions AttendanceSession[]
+
+  @@unique([courseId, name])
+  @@index([courseId])
+  @@map("course_batch")
+}
+
+model CourseSubject {
+  id          String        @id
+  courseId    String
+  batchId     String
+  title       String
+  description String        @db.Text
+  position    Int
+  teacherId   String
+  course      Course        @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  batch       CourseBatch   @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  teacher     User          @relation("SubjectTeacher", fields: [teacherId], references: [id], onDelete: Restrict)
+  classes     CourseClass[]
+
+  @@unique([batchId, position])
+  @@index([teacherId])
+  @@index([courseId])
+  @@map("course_subject")
+}
+
+model CourseClass {
+  id                    String                 @id
+  courseId              String
+  batchId               String
+  subjectId             String
+  name                  String
+  durationMinutes       Int
+  position              Int
+  scheduledAt           DateTime?
+  venue                 String?
+  deliveryMode          DeliveryMode           @default(ONSITE)
+  course                Course                 @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  batch                 CourseBatch            @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  subject               CourseSubject          @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  materials             CourseMaterial[]
+  speakerEvaluations    SpeakerEvaluation[]
+  learnInBranchSessions LearnInBranchSession[]
+
+  @@unique([batchId, position])
+  @@index([courseId])
+  @@index([subjectId])
+  @@map("course_class")
+}
+
+model CourseMaterial {
+  id          String             @id
+  classId     String
+  title       String
+  type        CourseMaterialType @default(TEXT)
+  description String?            @db.Text
+  url         String?
+  storageKey  String?
+  position    Int
+  class       CourseClass        @relation(fields: [classId], references: [id], onDelete: Cascade)
+
+  @@unique([classId, position])
+  @@map("course_material")
+}
+
+model SpeakerEvaluation {
+  id                  String      @id
+  classId             String
+  participantId       String
+  presentationQuality Int
+  experienceSharing   Int
+  sessionBenefit      Int
+  topicCompleteness   Int
+  learningEnvironment Int
+  createdAt           DateTime    @default(now())
+  updatedAt           DateTime    @updatedAt
+  class               CourseClass @relation(fields: [classId], references: [id], onDelete: Cascade)
+  participant         User        @relation("SpeakerEvaluationParticipant", fields: [participantId], references: [id], onDelete: Restrict)
+
+  @@unique([classId, participantId])
+  @@index([participantId, updatedAt])
+  @@map("speaker_evaluation")
+}
+
+model CourseEnrollment {
+  id                    String                 @id
+  courseId              String
+  batchId               String
+  participantId         String
+  assignedById          String?
+  status                CourseEnrollmentStatus @default(ASSIGNED)
+  assignedAt            DateTime               @default(now())
+  completedAt           DateTime?
+  learnInBranchDeadline DateTime?
+  certificateNumber     String?                @unique
+  course                Course                 @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  batch                 CourseBatch            @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  participant           User                   @relation("CourseParticipant", fields: [participantId], references: [id], onDelete: Restrict)
+  assignedBy            User?                  @relation("EnrollmentAssigner", fields: [assignedById], references: [id], onDelete: SetNull)
+  learnInBranchReport   LearnInBranchReport?
+
+  @@unique([batchId, participantId])
+  @@index([courseId])
+  @@index([participantId, status])
+  @@map("course_enrollment")
+}
+
+model LearnInBranchReport {
+  id             String                      @id
+  enrollmentId   String                      @unique
+  branchId       String
+  facilitatorId  String
+  managerId      String?
+  status         LearnInBranchReportStatus   @default(PENDING_APPROVAL)
+  submittedAt    DateTime                    @default(now())
+  approvedAt     DateTime?
+  managerComment String?                     @db.Text
+  enrollment     CourseEnrollment            @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+  branch         Branch                      @relation(fields: [branchId], references: [id], onDelete: Restrict)
+  facilitator    User                        @relation("LearnInBranchFacilitator", fields: [facilitatorId], references: [id], onDelete: Restrict)
+  manager        User?                       @relation("LearnInBranchApprover", fields: [managerId], references: [id], onDelete: SetNull)
+  sessions       LearnInBranchSession[]
+  answers        LearnInBranchReportAnswer[]
+
+  @@index([branchId, status, submittedAt])
+  @@index([facilitatorId, submittedAt])
+  @@map("learn_in_branch_report")
+}
+
+model LearnInBranchQuestion {
+  id            String                      @id
+  prompt        String                      @db.Text
+  options       String[]
+  position      Int                         @default(0)
+  createdAt     DateTime                    @default(now())
+  reportAnswers LearnInBranchReportAnswer[]
+
+  @@index([position, createdAt])
+  @@map("learn_in_branch_question")
+}
+
+model LearnInBranchReportAnswer {
+  reportId   String
+  questionId String
+  prompt     String                @db.Text
+  options    String[]
+  answer     String?
+  position   Int
+  report     LearnInBranchReport   @relation(fields: [reportId], references: [id], onDelete: Cascade)
+  question   LearnInBranchQuestion @relation(fields: [questionId], references: [id], onDelete: Restrict)
+
+  @@id([reportId, questionId])
+  @@index([reportId, position])
+  @@map("learn_in_branch_report_answer")
+}
+
+model LearnInBranchSession {
+  id        String                    @id
+  reportId  String
+  classId   String
+  sessionAt DateTime
+  location  String
+  report    LearnInBranchReport       @relation(fields: [reportId], references: [id], onDelete: Cascade)
+  class     CourseClass               @relation(fields: [classId], references: [id], onDelete: Cascade)
+  attendees LearnInBranchAttendance[]
+
+  @@index([reportId, sessionAt])
+  @@map("learn_in_branch_session")
+}
+
+model LearnInBranchAttendance {
+  sessionId     String
+  participantId String
+  session       LearnInBranchSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  participant   User                 @relation(fields: [participantId], references: [id], onDelete: Restrict)
+
+  @@id([sessionId, participantId])
+  @@index([participantId])
+  @@map("learn_in_branch_attendance")
+}
+
+model AttendanceSession {
+  id            String                 @id
+  courseId      String
+  batchId       String
+  courseDate    String                 @db.VarChar(10)
+  courseName    String
+  batchName     String
+  opensAt       DateTime
+  autoClosesAt  DateTime
+  startedAt     DateTime               @default(now())
+  updatedAt     DateTime               @updatedAt
+  closedAt      DateTime?
+  closeReason   AttendanceCloseReason?
+  qrNonce       String                 @unique
+  initiatedById String
+  course        Course                 @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  batch         CourseBatch            @relation(fields: [batchId], references: [id], onDelete: Cascade)
+  initiatedBy   User                   @relation("AttendanceSessionInitiator", fields: [initiatedById], references: [id], onDelete: Restrict)
+  records       AttendanceRecord[]
+
+  @@unique([batchId, courseDate])
+  @@index([courseId])
+  @@index([closedAt, autoClosesAt])
+  @@map("attendance_session")
+}
+
+model AttendanceRecord {
+  id            String            @id
+  sessionId     String
+  participantId String
+  employeeId    String
+  status        AttendanceStatus
+  method        AttendanceMethod
+  markedAt      DateTime
+  session       AttendanceSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  participant   User              @relation("AttendanceParticipant", fields: [participantId], references: [id], onDelete: Restrict)
+
+  @@unique([sessionId, participantId])
+  @@index([participantId, markedAt])
+  @@map("attendance_record")
+}
+
+model CourseAuditLog {
+  id          String   @id @default(cuid())
+  courseId    String?
+  courseTitle String?
+  actorId     String
+  action      String
+  createdAt   DateTime @default(now())
+  course      Course?  @relation(fields: [courseId], references: [id], onDelete: SetNull)
+  actor       User     @relation("CourseAuditActor", fields: [actorId], references: [id], onDelete: Restrict)
+
+  @@index([courseId, createdAt])
+  @@index([actorId, createdAt])
+  @@map("course_audit_log")
+}
+
+model ReportExportLog {
+  id          String   @id @default(cuid())
+  actorUserId String
+  reportType  String
+  filters     Json
+  rowCount    Int
+  createdAt   DateTime @default(now())
+  actor       User     @relation(fields: [actorUserId], references: [id], onDelete: Restrict)
+
+  @@index([actorUserId, createdAt])
+  @@map("report_export_log")
+}
+
+model Notification {
+  id        String    @id
+  userId    String
+  courseId  String?
+  title     String
+  message   String    @db.Text
+  href      String
+  createdAt DateTime  @default(now())
+  readAt    DateTime?
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course    Course?   @relation(fields: [courseId], references: [id], onDelete: SetNull)
+
+  @@index([userId, createdAt])
+  @@index([userId, readAt])
+  @@map("notification")
+}
+
+model Session {
+  id             String   @id
+  expiresAt      DateTime
+  token          String   @unique
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  ipAddress      String?
+  userAgent      String?
+  userId         String
+  impersonatedBy String?
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("session")
+}
+
+model Account {
+  id                    String    @id
+  accountId             String
+  providerId            String
+  userId                String
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  accessToken           String?
+  refreshToken          String?
+  idToken               String?
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope                 String?
+  password              String?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+
+  @@index([userId])
+  @@map("account")
+}
+
+model Verification {
+  id         String   @id
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([identifier])
+  @@map("verification")
+}
+
+model RateLimit {
+  id          String @id
+  key         String @unique
+  count       Int
+  lastRequest BigInt
+
+  @@map("rateLimit")
+}

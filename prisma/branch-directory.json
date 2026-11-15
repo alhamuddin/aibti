@@ -1,0 +1,1132 @@
+[
+  {
+    "id": "aibl-015010072",
+    "code": "015010072",
+    "name": "Bagerhat Branch"
+  },
+  {
+    "id": "aibl-015010948",
+    "code": "015010948",
+    "name": "Mongla Branch"
+  },
+  {
+    "id": "aibl-015011305",
+    "code": "015011305",
+    "name": "SHARANKHOLA BRANCH"
+  },
+  {
+    "id": "aibl-015030131",
+    "code": "015030131",
+    "name": "Bandarban Branch"
+  },
+  {
+    "id": "aibl-015040134",
+    "code": "015040134",
+    "name": "Barguna Branch"
+  },
+  {
+    "id": "aibl-015040671",
+    "code": "015040671",
+    "name": "Patharghata Branch"
+  },
+  {
+    "id": "aibl-015060251",
+    "code": "015060251",
+    "name": "Banaripara Branch"
+  },
+  {
+    "id": "aibl-015060280",
+    "code": "015060280",
+    "name": "BARISHAL BRANCH"
+  },
+  {
+    "id": "aibl-015090100",
+    "code": "015090100",
+    "name": "Bhola Branch"
+  },
+  {
+    "id": "aibl-015100379",
+    "code": "015100379",
+    "name": "BOGURA BRANCH"
+  },
+  {
+    "id": "aibl-015102748",
+    "code": "015102748",
+    "name": "Sherpur Branch"
+  },
+  {
+    "id": "aibl-015120054",
+    "code": "015120054",
+    "name": "Akhaura SME Branch"
+  },
+  {
+    "id": "aibl-015120104",
+    "code": "015120104",
+    "name": "Ashuganj Branch"
+  },
+  {
+    "id": "aibl-015120438",
+    "code": "015120438",
+    "name": "Brahmanbaria Branch"
+  },
+  {
+    "id": "aibl-015121095",
+    "code": "015121095",
+    "name": "Kutibazar Branch"
+  },
+  {
+    "id": "aibl-015121361",
+    "code": "015121361",
+    "name": "Nabinagar Branch"
+  },
+  {
+    "id": "aibl-015121879",
+    "code": "015121879",
+    "name": "Tantar Bazar SME Branch"
+  },
+  {
+    "id": "aibl-015130310",
+    "code": "015130310",
+    "name": "Chandpur Branch"
+  },
+  {
+    "id": "aibl-015130886",
+    "code": "015130886",
+    "name": "Hajigonj Branch"
+  },
+  {
+    "id": "aibl-015131698",
+    "code": "015131698",
+    "name": "Rahimanagar Branch"
+  },
+  {
+    "id": "aibl-015150132",
+    "code": "015150132",
+    "name": "Agrabad Branch (AD)"
+  },
+  {
+    "id": "aibl-015150237",
+    "code": "015150237",
+    "name": "Padua Bazar Branch"
+  },
+  {
+    "id": "aibl-015150253",
+    "code": "015150253",
+    "name": "Aman Bazar Branch"
+  },
+  {
+    "id": "aibl-015150329",
+    "code": "015150329",
+    "name": "Karnaphuli Branch"
+  },
+  {
+    "id": "aibl-015150574",
+    "code": "015150574",
+    "name": "Chambol Branch"
+  },
+  {
+    "id": "aibl-015150732",
+    "code": "015150732",
+    "name": "AZADIBAZAR BRANCH"
+  },
+  {
+    "id": "aibl-015150790",
+    "code": "015150790",
+    "name": "Bahaddarhat Branch"
+  },
+  {
+    "id": "aibl-015150811",
+    "code": "015150811",
+    "name": "Jamalkhan Branch"
+  },
+  {
+    "id": "aibl-015150837",
+    "code": "015150837",
+    "name": "Anowara Branch"
+  },
+  {
+    "id": "aibl-015150932",
+    "code": "015150932",
+    "name": "Zilla Parishad Branch"
+  },
+  {
+    "id": "aibl-015150945",
+    "code": "015150945",
+    "name": "Bandartila Branch"
+  },
+  {
+    "id": "aibl-015151210",
+    "code": "015151210",
+    "name": "Bhatiary Branch"
+  },
+  {
+    "id": "aibl-015151302",
+    "code": "015151302",
+    "name": "Boalkhali Branch"
+  },
+  {
+    "id": "aibl-015151728",
+    "code": "015151728",
+    "name": "Chawkbazar Branch"
+  },
+  {
+    "id": "aibl-015152569",
+    "code": "015152569",
+    "name": "Dohazari Branch"
+  },
+  {
+    "id": "aibl-015153018",
+    "code": "015153018",
+    "name": "Gohira Branch"
+  },
+  {
+    "id": "aibl-015153168",
+    "code": "015153168",
+    "name": "Halishahar Branch"
+  },
+  {
+    "id": "aibl-015153221",
+    "code": "015153221",
+    "name": "Hathazari Branch"
+  },
+  {
+    "id": "aibl-015153647",
+    "code": "015153647",
+    "name": "Jubilee Road Branch (AD)"
+  },
+  {
+    "id": "aibl-015153739",
+    "code": "015153739",
+    "name": "Kadamtoli Branch"
+  },
+  {
+    "id": "aibl-015154183",
+    "code": "015154183",
+    "name": "Keranihat Branch"
+  },
+  {
+    "id": "aibl-015154275",
+    "code": "015154275",
+    "name": "Khatungonj Branch (AD)"
+  },
+  {
+    "id": "aibl-015154367",
+    "code": "015154367",
+    "name": "Khulshi Branch"
+  },
+  {
+    "id": "aibl-015154633",
+    "code": "015154633",
+    "name": "Lichubagan Branch"
+  },
+  {
+    "id": "aibl-015155324",
+    "code": "015155324",
+    "name": "Muradpur Branch"
+  },
+  {
+    "id": "aibl-015155629",
+    "code": "015155629",
+    "name": "Nazumia Hat Branch"
+  },
+  {
+    "id": "aibl-015155803",
+    "code": "015155803",
+    "name": "O.R. Nizam Road Branch"
+  },
+  {
+    "id": "aibl-015155924",
+    "code": "015155924",
+    "name": "Pahartali Branch"
+  },
+  {
+    "id": "aibl-015156136",
+    "code": "015156136",
+    "name": "Patherhat Branch"
+  },
+  {
+    "id": "aibl-015156165",
+    "code": "015156165",
+    "name": "Patiya Branch"
+  },
+  {
+    "id": "aibl-015157243",
+    "code": "015157243",
+    "name": "Shantirhat Branch"
+  },
+  {
+    "id": "aibl-015157306",
+    "code": "015157306",
+    "name": "Shiberhat Branch"
+  },
+  {
+    "id": "aibl-015157393",
+    "code": "015157393",
+    "name": "Sitakunda Branch"
+  },
+  {
+    "id": "aibl-015157519",
+    "code": "015157519",
+    "name": "Station Road Branch"
+  },
+  {
+    "id": "aibl-015157630",
+    "code": "015157630",
+    "name": "Anderkilla Branch"
+  },
+  {
+    "id": "aibl-015180199",
+    "code": "015180199",
+    "name": "Chuadanga Branch"
+  },
+  {
+    "id": "aibl-015190497",
+    "code": "015190497",
+    "name": "BARURA BRANCH"
+  },
+  {
+    "id": "aibl-015190705",
+    "code": "015190705",
+    "name": "Bizrabazar Branch"
+  },
+  {
+    "id": "aibl-015190884",
+    "code": "015190884",
+    "name": "Chandina Branch"
+  },
+  {
+    "id": "aibl-015191159",
+    "code": "015191159",
+    "name": "CUMILLA BRANCH"
+  },
+  {
+    "id": "aibl-015191425",
+    "code": "015191425",
+    "name": "Companigonj Branch, Comilla"
+  },
+  {
+    "id": "aibl-015192024",
+    "code": "015192024",
+    "name": "Gallai Branch"
+  },
+  {
+    "id": "aibl-015192116",
+    "code": "015192116",
+    "name": "Gouripur Branch"
+  },
+  {
+    "id": "aibl-015192716",
+    "code": "015192716",
+    "name": "Laksam Branch"
+  },
+  {
+    "id": "aibl-015193252",
+    "code": "015193252",
+    "name": "Nangalkot Branch"
+  },
+  {
+    "id": "aibl-015220059",
+    "code": "015220059",
+    "name": "Pekua Branch"
+  },
+  {
+    "id": "aibl-015220220",
+    "code": "015220220",
+    "name": "Court Bazar Branch"
+  },
+  {
+    "id": "aibl-015220259",
+    "code": "015220259",
+    "name": "Cox’s Bazar Branch"
+  },
+  {
+    "id": "aibl-015220404",
+    "code": "015220404",
+    "name": "Eidgah Branch"
+  },
+  {
+    "id": "aibl-015220912",
+    "code": "015220912",
+    "name": "Teknaf Branch"
+  },
+  {
+    "id": "aibl-015260051",
+    "code": "015260051",
+    "name": "Abdullahpur SME Branch"
+  },
+  {
+    "id": "aibl-015260080",
+    "code": "015260080",
+    "name": "Sonargaon Janapath Road Branch"
+  },
+  {
+    "id": "aibl-015260093",
+    "code": "015260093",
+    "name": "Kathgora Bazar Branch"
+  },
+  {
+    "id": "aibl-015260130",
+    "code": "015260130",
+    "name": "Amin Bazar Branch"
+  },
+  {
+    "id": "aibl-015260301",
+    "code": "015260301",
+    "name": "Gulshan Link Road Branch"
+  },
+  {
+    "id": "aibl-015260435",
+    "code": "015260435",
+    "name": "Banani Branch (AD)"
+  },
+  {
+    "id": "aibl-015260556",
+    "code": "015260556",
+    "name": "BASHUNDHARA BRANCH"
+  },
+  {
+    "id": "aibl-015260743",
+    "code": "015260743",
+    "name": "Khilkhet Branch"
+  },
+  {
+    "id": "aibl-015260914",
+    "code": "015260914",
+    "name": "Daxminkhan Branch"
+  },
+  {
+    "id": "aibl-015261184",
+    "code": "015261184",
+    "name": "Dhanmondi Branch(AD)"
+  },
+  {
+    "id": "aibl-015261250",
+    "code": "015261250",
+    "name": "Azampur Branch"
+  },
+  {
+    "id": "aibl-015261263",
+    "code": "015261263",
+    "name": "Jamgora Branch"
+  },
+  {
+    "id": "aibl-015261726",
+    "code": "015261726",
+    "name": "Gulshan Branch(AD)"
+  },
+  {
+    "id": "aibl-015261968",
+    "code": "015261968",
+    "name": "Hazaribagh Branch"
+  },
+  {
+    "id": "aibl-015262059",
+    "code": "015262059",
+    "name": "Hemayetpur Branch"
+  },
+  {
+    "id": "aibl-015262538",
+    "code": "015262538",
+    "name": "Kawran Bazar Branch"
+  },
+  {
+    "id": "aibl-015262875",
+    "code": "015262875",
+    "name": "Manda Branch"
+  },
+  {
+    "id": "aibl-015262983",
+    "code": "015262983",
+    "name": "Mirpur Branch"
+  },
+  {
+    "id": "aibl-015263137",
+    "code": "015263137",
+    "name": "Mirpur-10 Golchattar Branch"
+  },
+  {
+    "id": "aibl-015263195",
+    "code": "015263195",
+    "name": "Mohakhali Branch"
+  },
+  {
+    "id": "aibl-015263379",
+    "code": "015263379",
+    "name": "Mohammadpur Krishi Market Branch"
+  },
+  {
+    "id": "aibl-015263429",
+    "code": "015263429",
+    "name": "Natun Bazar Baridhara Branch"
+  },
+  {
+    "id": "aibl-015263490",
+    "code": "015263490",
+    "name": "New Elephant Road Branch(AD)"
+  },
+  {
+    "id": "aibl-015263582",
+    "code": "015263582",
+    "name": "Pallabi Branch"
+  },
+  {
+    "id": "aibl-015263616",
+    "code": "015263616",
+    "name": "Panthapath Branch"
+  },
+  {
+    "id": "aibl-015263708",
+    "code": "015263708",
+    "name": "Pragati Sarani Branch"
+  },
+  {
+    "id": "aibl-015263911",
+    "code": "015263911",
+    "name": "Rampura Branch"
+  },
+  {
+    "id": "aibl-015264307",
+    "code": "015264307",
+    "name": "Shyamoli Branch"
+  },
+  {
+    "id": "aibl-015264486",
+    "code": "015264486",
+    "name": "Tejgaon Branch"
+  },
+  {
+    "id": "aibl-015264699",
+    "code": "015264699",
+    "name": "Uttara Model Town Branch(AD)"
+  },
+  {
+    "id": "aibl-015270054",
+    "code": "015270054",
+    "name": "Ruhitpur Branch"
+  },
+  {
+    "id": "aibl-015270346",
+    "code": "015270346",
+    "name": "Ati Bazar Branch"
+  },
+  {
+    "id": "aibl-015270546",
+    "code": "015270546",
+    "name": "NEW MARKET BRANCH"
+  },
+  {
+    "id": "aibl-015270638",
+    "code": "015270638",
+    "name": "Bashabo Branch"
+  },
+  {
+    "id": "aibl-015270854",
+    "code": "015270854",
+    "name": "Banglamotor Branch"
+  },
+  {
+    "id": "aibl-015271390",
+    "code": "015271390",
+    "name": "Motijheel Corporate Branch (AD)"
+  },
+  {
+    "id": "aibl-015271495",
+    "code": "015271495",
+    "name": "Kolatia SME Branch"
+  },
+  {
+    "id": "aibl-015271903",
+    "code": "015271903",
+    "name": "Dilkusha Branch (AD)"
+  },
+  {
+    "id": "aibl-015272694",
+    "code": "015272694",
+    "name": "Head Office Corporate Branch"
+  },
+  {
+    "id": "aibl-015272986",
+    "code": "015272986",
+    "name": "Islampur Branch"
+  },
+  {
+    "id": "aibl-015273222",
+    "code": "015273222",
+    "name": "West Jatrabari Branch"
+  },
+  {
+    "id": "aibl-015273248",
+    "code": "015273248",
+    "name": "South Jatrabari Branch"
+  },
+  {
+    "id": "aibl-015273464",
+    "code": "015273464",
+    "name": "Kaligonj Branch"
+  },
+  {
+    "id": "aibl-015273585",
+    "code": "015273585",
+    "name": "Kamrangirchar Branch"
+  },
+  {
+    "id": "aibl-015273648",
+    "code": "015273648",
+    "name": "Keranigonj Branch"
+  },
+  {
+    "id": "aibl-015273743",
+    "code": "015273743",
+    "name": "Konapara Branch, Dhaka"
+  },
+  {
+    "id": "aibl-015274247",
+    "code": "015274247",
+    "name": "Motijheel Branch (AD)"
+  },
+  {
+    "id": "aibl-015274397",
+    "code": "015274397",
+    "name": "Mouchak Branch"
+  },
+  {
+    "id": "aibl-015274421",
+    "code": "015274421",
+    "name": "Moulvi Bazar Branch Dhaka (AD)"
+  },
+  {
+    "id": "aibl-015274605",
+    "code": "015274605",
+    "name": "Nandipara Branch"
+  },
+  {
+    "id": "aibl-015274726",
+    "code": "015274726",
+    "name": "Nawabpur Road Branch (AD)"
+  },
+  {
+    "id": "aibl-015275112",
+    "code": "015275112",
+    "name": "North South Road Branch (AD)"
+  },
+  {
+    "id": "aibl-015276340",
+    "code": "015276340",
+    "name": "Shantinagar Branch"
+  },
+  {
+    "id": "aibl-015276858",
+    "code": "015276858",
+    "name": "VIP Road Branch (AD)"
+  },
+  {
+    "id": "aibl-015280673",
+    "code": "015280673",
+    "name": "Dinajpur Branch"
+  },
+  {
+    "id": "aibl-015290526",
+    "code": "015290526",
+    "name": "Faridpur Branch"
+  },
+  {
+    "id": "aibl-015300524",
+    "code": "015300524",
+    "name": "Feni Branch"
+  },
+  {
+    "id": "aibl-015321095",
+    "code": "015321095",
+    "name": "Palashbari Branch"
+  },
+  {
+    "id": "aibl-015330086",
+    "code": "015330086",
+    "name": "Bormi Branch"
+  },
+  {
+    "id": "aibl-015330099",
+    "code": "015330099",
+    "name": "Fulbaria Branch"
+  },
+  {
+    "id": "aibl-015330523",
+    "code": "015330523",
+    "name": "Gazipur Branch"
+  },
+  {
+    "id": "aibl-015330736",
+    "code": "015330736",
+    "name": "Joydebpur Chowrasta Branch"
+  },
+  {
+    "id": "aibl-015330794",
+    "code": "015330794",
+    "name": "Kaliakoir Branch"
+  },
+  {
+    "id": "aibl-015330886",
+    "code": "015330886",
+    "name": "Kapashia Branch"
+  },
+  {
+    "id": "aibl-015331630",
+    "code": "015331630",
+    "name": "TONGI BRANCH"
+  },
+  {
+    "id": "aibl-015350374",
+    "code": "015350374",
+    "name": "GOPALGANJ BRANCH"
+  },
+  {
+    "id": "aibl-015360614",
+    "code": "015360614",
+    "name": "Habiganj Branch"
+  },
+  {
+    "id": "aibl-015360898",
+    "code": "015360898",
+    "name": "Madhabpur SME Branch"
+  },
+  {
+    "id": "aibl-015380407",
+    "code": "015380407",
+    "name": "Joypurhat Branch"
+  },
+  {
+    "id": "aibl-015390855",
+    "code": "015390855",
+    "name": "Jamalpur Branch"
+  },
+  {
+    "id": "aibl-015410285",
+    "code": "015410285",
+    "name": "Benapole Branch"
+  },
+  {
+    "id": "aibl-015410948",
+    "code": "015410948",
+    "name": "JASHORE BRANCH"
+  },
+  {
+    "id": "aibl-015411518",
+    "code": "015411518",
+    "name": "Monirampur Branch"
+  },
+  {
+    "id": "aibl-015411639",
+    "code": "015411639",
+    "name": "Nowapara Branch"
+  },
+  {
+    "id": "aibl-015420312",
+    "code": "015420312",
+    "name": "Jhalokathi Branch"
+  },
+  {
+    "id": "aibl-015440642",
+    "code": "015440642",
+    "name": "Jhenaidah Branch"
+  },
+  {
+    "id": "aibl-015460222",
+    "code": "015460222",
+    "name": "Matiranga Branch"
+  },
+  {
+    "id": "aibl-015470559",
+    "code": "015470559",
+    "name": "Chuknagar Branch"
+  },
+  {
+    "id": "aibl-015470704",
+    "code": "015470704",
+    "name": "DAULATPUR BRANCH"
+  },
+  {
+    "id": "aibl-015470883",
+    "code": "015470883",
+    "name": "Gallamari Branch"
+  },
+  {
+    "id": "aibl-015471545",
+    "code": "015471545",
+    "name": "Khulna Branch (AD)"
+  },
+  {
+    "id": "aibl-015472652",
+    "code": "015472652",
+    "name": "TEROKHADA BRANCH"
+  },
+  {
+    "id": "aibl-015481243",
+    "code": "015481243",
+    "name": "Bhairab Branch"
+  },
+  {
+    "id": "aibl-015490647",
+    "code": "015490647",
+    "name": "Rowmari Branch"
+  },
+  {
+    "id": "aibl-015500287",
+    "code": "015500287",
+    "name": "BHERAMARA BRANCH"
+  },
+  {
+    "id": "aibl-015500940",
+    "code": "015500940",
+    "name": "Kushtia Branch"
+  },
+  {
+    "id": "aibl-015501365",
+    "code": "015501365",
+    "name": "PORADAH BRANCH"
+  },
+  {
+    "id": "aibl-015510730",
+    "code": "015510730",
+    "name": "Lakshmipur Branch"
+  },
+  {
+    "id": "aibl-015520467",
+    "code": "015520467",
+    "name": "Lalmonirhat Branch"
+  },
+  {
+    "id": "aibl-015540555",
+    "code": "015540555",
+    "name": "MOSTAFAPUR BRANCH"
+  },
+  {
+    "id": "aibl-015540768",
+    "code": "015540768",
+    "name": "TEKERHAT BRANCH"
+  },
+  {
+    "id": "aibl-015550558",
+    "code": "015550558",
+    "name": "Magura Branch"
+  },
+  {
+    "id": "aibl-015560614",
+    "code": "015560614",
+    "name": "Manikgonj Branch"
+  },
+  {
+    "id": "aibl-015570109",
+    "code": "015570109",
+    "name": "Bamondi Branch"
+  },
+  {
+    "id": "aibl-015580281",
+    "code": "015580281",
+    "name": "Moulvibazar Branch"
+  },
+  {
+    "id": "aibl-015581422",
+    "code": "015581422",
+    "name": "Sreemangal Branch"
+  },
+  {
+    "id": "aibl-015590134",
+    "code": "015590134",
+    "name": "Baligaon Branch"
+  },
+  {
+    "id": "aibl-015590318",
+    "code": "015590318",
+    "name": "Bhagyakul Branch"
+  },
+  {
+    "id": "aibl-015590855",
+    "code": "015590855",
+    "name": "LAUHAJANG BRANCH"
+  },
+  {
+    "id": "aibl-015591175",
+    "code": "015591175",
+    "name": "Rampal Branch"
+  },
+  {
+    "id": "aibl-015610151",
+    "code": "015610151",
+    "name": "Masterbari Branch"
+  },
+  {
+    "id": "aibl-015611750",
+    "code": "015611750",
+    "name": "Mymensingh Branch"
+  },
+  {
+    "id": "aibl-015641096",
+    "code": "015641096",
+    "name": "Mohadevpur Branch"
+  },
+  {
+    "id": "aibl-015650645",
+    "code": "015650645",
+    "name": "Narail Branch"
+  },
+  {
+    "id": "aibl-015670041",
+    "code": "015670041",
+    "name": "Araihazar Branch"
+  },
+  {
+    "id": "aibl-015670175",
+    "code": "015670175",
+    "name": "Bandar SME Branch"
+  },
+  {
+    "id": "aibl-015670212",
+    "code": "015670212",
+    "name": "GAWSIA BRANCH"
+  },
+  {
+    "id": "aibl-015670320",
+    "code": "015670320",
+    "name": "Signboard Branch"
+  },
+  {
+    "id": "aibl-015671066",
+    "code": "015671066",
+    "name": "Mograpara Branch"
+  },
+  {
+    "id": "aibl-015671187",
+    "code": "015671187",
+    "name": "Narayangonj Branch"
+  },
+  {
+    "id": "aibl-015671224",
+    "code": "015671224",
+    "name": "Nayapur Branch"
+  },
+  {
+    "id": "aibl-015671303",
+    "code": "015671303",
+    "name": "Pagla Branch"
+  },
+  {
+    "id": "aibl-015671558",
+    "code": "015671558",
+    "name": "SHIBU MARKET BRANCH"
+  },
+  {
+    "id": "aibl-015680673",
+    "code": "015680673",
+    "name": "Madhabdi Branch"
+  },
+  {
+    "id": "aibl-015680860",
+    "code": "015680860",
+    "name": "Panchdona SME Branch"
+  },
+  {
+    "id": "aibl-015681393",
+    "code": "015681393",
+    "name": "Bhelanagar Branch"
+  },
+  {
+    "id": "aibl-015691091",
+    "code": "015691091",
+    "name": "Natore Branch"
+  },
+  {
+    "id": "aibl-015700258",
+    "code": "015700258",
+    "name": "Chapainawabganj Branch"
+  },
+  {
+    "id": "aibl-015720733",
+    "code": "015720733",
+    "name": "Netrokona Branch"
+  },
+  {
+    "id": "aibl-015730794",
+    "code": "015730794",
+    "name": "Saidpur Branch (AD)"
+  },
+  {
+    "id": "aibl-015750266",
+    "code": "015750266",
+    "name": "Bashurhat SME Branch"
+  },
+  {
+    "id": "aibl-015750679",
+    "code": "015750679",
+    "name": "Chowmuhani Branch"
+  },
+  {
+    "id": "aibl-015751036",
+    "code": "015751036",
+    "name": "Hatiya Branch"
+  },
+  {
+    "id": "aibl-015751573",
+    "code": "015751573",
+    "name": "Maijdee Court Branch"
+  },
+  {
+    "id": "aibl-015761789",
+    "code": "015761789",
+    "name": "Pabna Branch"
+  },
+  {
+    "id": "aibl-015770046",
+    "code": "015770046",
+    "name": "Atwari Branch"
+  },
+  {
+    "id": "aibl-015780052",
+    "code": "015780052",
+    "name": "Alipur Branch"
+  },
+  {
+    "id": "aibl-015781093",
+    "code": "015781093",
+    "name": "Patuakhali Branch"
+  },
+  {
+    "id": "aibl-015790134",
+    "code": "015790134",
+    "name": "Vandaria Branch"
+  },
+  {
+    "id": "aibl-015790521",
+    "code": "015790521",
+    "name": "Mathbaria Branch"
+  },
+  {
+    "id": "aibl-015790763",
+    "code": "015790763",
+    "name": "Pirojpur Branch"
+  },
+  {
+    "id": "aibl-015811934",
+    "code": "015811934",
+    "name": "Rajshahi Branch (AD)"
+  },
+  {
+    "id": "aibl-015820738",
+    "code": "015820738",
+    "name": "Rajbari Branch"
+  },
+  {
+    "id": "aibl-015840521",
+    "code": "015840521",
+    "name": "Rangamati Branch"
+  },
+  {
+    "id": "aibl-015850179",
+    "code": "015850179",
+    "name": "Badargonj SME Branch"
+  },
+  {
+    "id": "aibl-015851457",
+    "code": "015851457",
+    "name": "Rangpur Branch"
+  },
+  {
+    "id": "aibl-015860419",
+    "code": "015860419",
+    "name": "Kazirhat Branch"
+  },
+  {
+    "id": "aibl-015870054",
+    "code": "015870054",
+    "name": "Nalta Branch"
+  },
+  {
+    "id": "aibl-015870559",
+    "code": "015870559",
+    "name": "Jhaudanga Branch"
+  },
+  {
+    "id": "aibl-015870588",
+    "code": "015870588",
+    "name": "Kalaroa Branch, Satkhira"
+  },
+  {
+    "id": "aibl-015871095",
+    "code": "015871095",
+    "name": "Satkhira Branch"
+  },
+  {
+    "id": "aibl-015871211",
+    "code": "015871211",
+    "name": "Shyamnagar Branch"
+  },
+  {
+    "id": "aibl-015880057",
+    "code": "015880057",
+    "name": "Sirajgonj Branch"
+  },
+  {
+    "id": "aibl-015881906",
+    "code": "015881906",
+    "name": "Shahjadpur Branch"
+  },
+  {
+    "id": "aibl-015890647",
+    "code": "015890647",
+    "name": "Sreebordi Branch"
+  },
+  {
+    "id": "aibl-015900432",
+    "code": "015900432",
+    "name": "Gobindaganj Branch"
+  },
+  {
+    "id": "aibl-015910048",
+    "code": "015910048",
+    "name": "Amborkhana Branch"
+  },
+  {
+    "id": "aibl-015910314",
+    "code": "015910314",
+    "name": "BeaniBazar Branch, Sylhet"
+  },
+  {
+    "id": "aibl-015912509",
+    "code": "015912509",
+    "name": "Laldighirpar Branch (AD)"
+  },
+  {
+    "id": "aibl-015913258",
+    "code": "015913258",
+    "name": "Shahjalal Uposhahar Branch"
+  },
+  {
+    "id": "aibl-015913445",
+    "code": "015913445",
+    "name": "Dakshin Shurma Branch"
+  },
+  {
+    "id": "aibl-015914152",
+    "code": "015914152",
+    "name": "Zindabazar Branch"
+  },
+  {
+    "id": "aibl-015930828",
+    "code": "015930828",
+    "name": "ELENGA BRANCH"
+  },
+  {
+    "id": "aibl-015932200",
+    "code": "015932200",
+    "name": "SAKHIPUR BRANCH"
+  },
+  {
+    "id": "aibl-015932297",
+    "code": "015932297",
+    "name": "TANGAIL BRANCH"
+  },
+  {
+    "id": "aibl-015940971",
+    "code": "015940971",
+    "name": "THAKURGAON BRANCH"
+  }
+]
